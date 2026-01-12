@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="খাটি বাংলা ভাইরাল সম্পূর্ণ ভিডিও">
+    <title>খাটি বাংলা ভাইরাল সম্পূর্ণ ভিডিও</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            background: #111111;
+            color: #dddddd;
+            line-height: 1.6em;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 15px;
+            background: rgb(17, 17, 17);
+            border-radius: 12px;
+            min-height: 100vh;
+        }
+
+        @media (min-width: 721px) {
+            .container {
+                margin: 20px auto;
+                min-height: auto;
+            }
+        }
+
+        h1 {
+            color: #ff4444;
+            margin: 0.67em 0px;
+            text-align: center;
+            font-size: 1.5em;
+            line-height: 1.3em;
+            word-wrap: break-word;
+        }
+
+        @media (min-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
+        .warning-text {
+            color: #dddddd;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .warning-box {
+            background: rgb(27, 27, 27);
+            border-left: 4px solid red;
+            color: white;
+            margin: 15px 0px;
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box strong {
+            color: red;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .button-container {
+            margin: 20px 0px;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .btn {
+            appearance: button;
+            background: rgb(230, 0, 0);
+            border-color: initial;
+            border-radius: 10px;
+            border-style: none;
+            border-width: initial;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: inherit;
+            margin: 0px;
+            overflow: visible;
+            padding: 15px 35px;
+            color: white;
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (min-width: 480px) {
+            .btn {
+                width: auto;
+                min-width: 200px;
+            }
+        }
+
+        .btn-green {
+            background: rgb(76, 175, 80);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .timer-text {
+            color: #aaaaaa;
+            font-size: 14px;
+            text-align: center;
+            margin: 15px 0;
+            padding: 0 10px;
+        }
+
+        .instruction-text {
+            color: #aaaaaa;
+            font-size: 14px;
+            text-align: center;
+            margin: 15px 0;
+            padding: 0 10px;
+        }
+
+        .footer-text {
+            color: #aaaaaa;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #playButtonContainer {
+            display: none;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            .container {
+                padding: 12px;
+                border-radius: 0;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 18px;
+            }
+
+            .warning-box {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+
+        /* Prevent horizontal scrolling */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Better touch targets for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .btn {
+                padding: 18px 30px;
+            }
+
+            .warning-box {
+                padding: 15px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>খাটি বাংলা ভাইরাল সম্পূর্ণ ভিডিও</h1>
+        <p class="warning-text">এটি শুধুমাত্র ১৮+ দর্শকদের জন্য। দয়া করে নিজের দায়িত্বে দেখুন।</p>
+
+        <div class="warning-box">
+            <strong>⚠️ 18+ WARNING</strong>
+            এই ওয়েবসাইটে কোনো ভিডিও হোস্ট করা হয় না। সব ভিডিও তৃতীয় পক্ষের ওয়েবসাইটে রয়েছে।
+        </div>
+
+        <div class="button-container">
+            <button id="watchBtn" class="btn" onclick="openAdLink()">▶ WATCH VIDEO</button>
+        </div>
+
+        <div id="playButtonContainer" class="button-container">
+            <button id="playBtn" class="btn btn-green" onclick="openVideoLink()">▶ PLAY VIDEO</button>
+        </div>
+
+        <p id="timerText" class="timer-text">অপেক্ষা করুন... <span id="countdown">10</span> সেকেন্ড</p>
+        <p id="instructionText" class="instruction-text">বিজ্ঞাপন সম্পূর্ণ দেখার ১০ সেকেন্ড পর Play button আসবে</p>
+        <p class="footer-text">© 18+ Only | No videos hosted</p>
+    </div>
+
+    <script>
+        // বিজ্ঞাপন লিংক - এখানে আপনার বিজ্ঞাপন লিংক দিন
+        var adLink = "https://example.com/advertisement";
+
+        // ভিডিও লিংক - এখানে আপনার ভিডিও লিংক দিন
+        var videoLink = "https://example.com/video";
+
+        function openAdLink() {
+            // নতুন ট্যাবে বিজ্ঞাপন লিংক ওপেন করুন
+            window.open(adLink, '_blank');
+            
+            // WATCH VIDEO বাটন লুকিয়ে ফেলুন
+            document.getElementById('watchBtn').style.display = 'none';
+            
+            // টাইমার টেক্সট দেখান
+            document.getElementById('instructionText').style.display = 'none';
+            document.getElementById('timerText').style.display = 'block';
+            
+            // কাউন্টডাউন শুরু করুন
+            var countdown = 10;
+            var countdownElement = document.getElementById('countdown');
+            
+            var timerInterval = setInterval(function() {
+                countdown--;
+                countdownElement.textContent = countdown;
+                
+                if (countdown <= 0) {
+                    clearInterval(timerInterval);
+                    // Play বাটন দেখান
+                    document.getElementById('timerText').style.display = 'none';
+                    document.getElementById('playButtonContainer').style.display = 'block';
+                }
+            }, 1000);
+        }
+
+        function openVideoLink() {
+            // নতুন ট্যাবে ভিডিও লিংক ওপেন করুন
+            window.open(videoLink, '_blank');
+        }
+    </script>
+</body>
+</html>
